@@ -12,7 +12,7 @@ export let options = {
 
 export default function() {
   group("front page", function() {
-    check(http.get("http://localhost", {
+    check(http.get("https://localhost", {
       tags: { 'kind': 'html' },
     }), {
       "status is 200": (res) => res.status === 200,

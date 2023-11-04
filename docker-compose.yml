@@ -17,7 +17,7 @@ services:
       - INFLUXDB_DB=k6
 
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:10.2.0
     container_name: benchmark-grafana
     networks:
       - grafana
@@ -31,7 +31,7 @@ services:
       - ./grafana:/etc/grafana/provisioning/
 
   k6:
-    image: grafana/k6:latest
+    image: grafana/k6:0.47.0
     container_name: benchmark-k6
     networks:
       - k6
